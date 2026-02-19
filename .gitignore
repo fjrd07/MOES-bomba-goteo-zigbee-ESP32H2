@@ -1,0 +1,12 @@
+
+/pio
+/.pio
+/.vscode
+/ignore
+**/*.bin
+**/*.elf
+**/*.o
+**/*.a
+**/*.d
+**/*.map
+compile_commands.json
