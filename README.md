@@ -33,6 +33,37 @@ Este proyecto implementa el firmware para el **Apollo Goteo H2**, un controlador
 - El soporte para Zigbee en Arduino para ESP32-H2 está en desarrollo activo. Se recomienda usar la versión más reciente de la plataforma `espressif32`.
 - La lógica de Zigbee actual es un "Stub" (marcador de posición). Se debe integrar la librería específica (ej. `esp-zigbee-sdk` o `arduino-esp32-zigbee`) según la preferencia del desarrollador final.
 
+## Guía de Compilación y Carga (Desde Casa)
+
+Como la primera compilación requiere descargar herramientas de internet, sigue estos pasos en tu casa:
+
+### 1. Preparación
+1.  Instala **Visual Studio Code**.
+2.  Instala la extensión **PlatformIO IDE** dentro de VS Code (icono de cabeza de alien).
+3.  Clona este repositorio o copia la carpeta `MOES-bomba-goteo-zigbee-ESP32H2`.
+4.  Abre la carpeta del proyecto en VS Code (**File > Open Folder**).
+
+### 2. Compilación
+1.  Espera a que PlatformIO termine de indexar (verás una barra de progreso abajo).
+2.  Haz clic en el icono de **PlatformIO** en la barra lateral izquierda.
+3.  En "Project Tasks", despliega `env:esp32-h2-devkitm-1` > **General**.
+4.  Haz clic en **Build**.
+    *   *Nota*: La primera vez tardará varios minutos descargando el framework `espressif32`.
+
+### 3. Cagar el Programa (Flash)
+1.  Conecta tu **ESP32-H2** al PC por USB.
+2.  (Opcional) Si no detecta el puerto, pon la placa en **Modo Boot**:
+    *   Mantén presionado el botón **BOOT** (o IO9).
+    *   Pulsa y suelta el botón **RST** (Reset).
+    *   Suelta el botón **BOOT**.
+3.  Haz clic en **Upload** en el menú de PlatformIO.
+4.  Una vez subido, pulsa **RST** para reiniciar la placa.
+
+### 4. Monitor Serie (Depuración)
+Para ver los mensajes de inicio y estado de Zigbee:
+*   Haz clic en **Monitor** en las tareas de PlatformIO.
+*   Asegúrate de que la velocidad sea **115200**.
+
 ---
 **Autor**: FSD (Generado por Asistente AI)
 **Versión**: 1.0
