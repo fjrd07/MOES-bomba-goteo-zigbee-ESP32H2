@@ -1,4 +1,4 @@
-# MOES Bomba Goteo Zigbee ESP32H2
+#Bomba Goteo Zigbee ESP32H2
 
 ## Descripción del Proyecto
 Este proyecto implementa el firmware para el **Apollo Goteo H2**, un controlador de riego dual inteligente basado en el microcontrolador ESP32-H2 (Zigbee 3.0). El sistema gestiona dos bombas de agua y monitorea el nivel de un depósito mediante un sensor de flotador, integrándose con Home Assistant a través de Zigbee2MQTT.
