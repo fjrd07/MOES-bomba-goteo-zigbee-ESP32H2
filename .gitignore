@@ -3,6 +3,8 @@
 /.pio
 /.vscode
 /ignore
+.env
+/graphify-out
 **/*.bin
 **/*.elf
 **/*.o

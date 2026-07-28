@@ -18,4 +18,9 @@ void showBootScreen();
 bool checkTouch(uint16_t *x, uint16_t *y); // Devuelve true si hay toque y las coordenadas
 void handleTouch(); // Procesa la acción táctil
 
+// Ahorro de energía (ver Config.h BACKLIGHT_TIMEOUT_MS y docs/hardware/DISPLAY_OPTIONS.md).
+// Llamar updateDisplayPowerSaving() en cada loop(): apaga backlight + GT911 tras inactividad.
+void updateDisplayPowerSaving();
+bool isDisplayAwake();
+
 #endif

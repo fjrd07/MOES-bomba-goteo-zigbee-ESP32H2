@@ -11,9 +11,12 @@ def make_ota_image(source, target, env):
     HEADER_VERSION = 0x0100
     HEADER_LENGTH = 56 # Fixed for now
     FIELD_CONTROL = 0x0000
+    # MANUFACTURER_CODE / IMAGE_TYPE deben coincidir EXACTAMENTE con la entrada de este
+    # firmware en el indice OTA de Z2M (ver README.md, "Actualizar firmware por OTA").
+    # Si cambias uno de los dos valores, actualiza tambien esa entrada del indice.
     MANUFACTURER_CODE = 0x1001 # Test Manufacturer
     IMAGE_TYPE = 0x0000        # Application
-    FILE_VERSION = 0x00000001  # V1
+    FILE_VERSION = 0x00000001  # V1 - incrementar en cada release OTA
     STACK_VERSION = 0x0002
     
     # Read firmware binary

@@ -1,0 +1,26 @@
+Designator,Value,Footprint,Quantity,Description,Datasheet,Manufacturer,MPN,Notes
+U1,ESP32-H2-MINI-1 Supermini,Module_SMD:ESP32-H2-Supermini-23.6x18mm,1,Modulo MCU Zigbee 3.0 End Device,,TENSTAR ROBOT (generic),,Confirmado - ver PIN_BREAKOUT.md
+U2,ST7796,Display_TFT:TFT_3.5in_320x480_SPI,1,Panel TFT IPS 3.5in SPI,,Generic,ST7796,Confirmado - ver platformio.ini
+U3,GT911,Module:GT911_Touch_Integrated,1,Controlador tactil capacitivo (integrado en U2),,Goodix,GT911,Confirmado - ver Config.h
+U4,DS3231,Module:DS3231_I2C_RTC,1,RTC I2C compensado en temperatura +-2ppm,,Maxim/Analog Devices,DS3231,Confirmado - ver ScheduleManager.cpp
+U5,AMS1117-3.3,Package_TO_SOT_SMD:SOT-223-3_TabPin2,1,Regulador LDO 3.3V,,Generic,AMS1117-3.3,Alternativa: HT7333 - ver PINOUT.md
+U6,TP4054,Package_TO_SOT_SMD:SOT-23-5,1,Cargador Li-ion USB de respaldo,,Generic,TP4054,Confirmado - ver PINOUT.md
+U7,CN3065,Package_SO:SOP-8,1,Controlador de carga solar Li-ion,,Consonance,CN3065,Recomendado - no instalado aun - ver POWER_BUDGET.md
+U8,ACS712-05B,Module:ACS712_Breakout,2,Sensor de corriente Hall 5A (ALTERNATIVA A) - obligatorio uno por bomba,,Allegro MicroSystems,ACS712ELCTR-05B-T,Alternativa A - no instalar junto con U9 - las 2 bombas corren simultaneamente, no admite sensor compartido - ver PUMP_DRY_RUN_DETECTION.md
+U9,INA180A1,Package_TO_SOT_SMD:SOT-23-5,2,Amplificador de corriente ganancia 20V/V (ALTERNATIVA B recomendada) - obligatorio uno por bomba,,Texas Instruments,INA180A1IDBVR,Alternativa B recomendada - usar con R5/R6 - las 2 bombas corren simultaneamente, no admite sensor compartido - ver PUMP_DRY_RUN_DETECTION.md
+Q1,AO3400A,Package_TO_SOT_SMD:SOT-23,1,MOSFET N logic-level - Bomba A,,Alpha & Omega Semi,AO3400A,Confirmado - ver PINOUT.md
+Q2,AO3400A,Package_TO_SOT_SMD:SOT-23,1,MOSFET N logic-level - Bomba B,,Alpha & Omega Semi,AO3400A,Confirmado - ver PINOUT.md
+D1,1N4007,Diode_THT:D_DO-41_SOD81,1,Diodo flyback Bomba A (ALTERNATIVA: SS14),,Generic,1N4007,Confirmado - ver PINOUT.md
+D2,1N4007,Diode_THT:D_DO-41_SOD81,1,Diodo flyback Bomba B (ALTERNATIVA: SS14),,Generic,1N4007,Confirmado - ver PINOUT.md
+R1,10k,Resistor_SMD:R_0805_2012Metric,1,Pull-down gate Q1,,Generic,,Confirmado - ver PINOUT.md
+R2,10k,Resistor_SMD:R_0805_2012Metric,1,Pull-down gate Q2,,Generic,,Confirmado - ver PINOUT.md
+R3,100k,Resistor_SMD:R_0805_2012Metric,1,Divisor de voltaje bateria - superior,,Generic,,PLACEHOLDER - ajustar al rango real de tu bateria - ver PINOUT.md
+R4,100k,Resistor_SMD:R_0805_2012Metric,1,Divisor de voltaje bateria - inferior,,Generic,,PLACEHOLDER - ajustar al rango real de tu bateria - ver PINOUT.md
+R5,0.1R 1% 1W,Resistor_SMD:R_2512_6332Metric,2,Shunt sensado de corriente (ALTERNATIVA B),,Generic,,Alternativa B - usar con U9 - ver PUMP_DRY_RUN_DETECTION.md
+C1,100nF,Capacitor_SMD:C_0805_2012Metric,1,Filtro/debounce sensor de nivel,,Generic,,Confirmado - ver PINOUT.md
+SW1,Reed Switch Float,Switch:SW_Float_Level_Sensor,1,Sensor de nivel de deposito,,Generic,,Confirmado - ver PINOUT.md
+BT1,18650 3500mAh,Battery:BatteryHolder_18650,2,Celda Li-ion en paralelo (7000mAh total),,Generic,,Recomendado - ver POWER_BUDGET.md
+PV1,6V 5-10W,Module:Solar_Panel,1,Panel solar monocristalino,,Generic,,Recomendado - ver POWER_BUDGET.md
+M1,DC Water Pump,Module:DC_Pump,1,Bomba de goteo A - velocidad via PWM,,User-defined,,Pendiente - modelo a definir por el usuario
+M2,DC Water Pump,Module:DC_Pump,1,Bomba de goteo B - velocidad via PWM,,User-defined,,Pendiente - modelo a definir por el usuario
+J1,16-Channel Terminal Block,Module:Screw_Terminal_Breakout_16ch,1,Breakout de terminales de tornillo (accesorio opcional),,TENSTAR ROBOT (generic),,Opcional - ver PIN_BREAKOUT.md
